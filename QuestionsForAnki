@@ -1,14 +1,53 @@
 What do HTML and CSS stand for?
-	Hyper Text Markup Language, Cascading Style Sheets
+Hyper Text Markup Language, Cascading Style Sheets
 
 What do almost all HTML tags have?
-	Opening and closing tag 
+Opening and closing tag
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
 What are the three parts of an HTML element?
-	Opening tag, content, closing tag
+Opening tag, content, closing tag
 
+Read up on https://www.theodinproject.com/lessons/foundations-the-box-model and https://www.theodinproject.com/lessons/foundations-block-and-inline
 
-Go to our CSS exercises repository and do “01-margin-and-padding-1” and “02-margin-and-padding-2”.
-https://github.com/TheOdinProject/css-exercises/tree/main/margin-and-padding
+How do you setup a flexbox?
+Have a parent class with child classes inside
+EX:https://codepen.io/TheOdinProjectExamples/pen/QWgNxrp
+
+A flex container is any element that contains what?
+display: flex
+
+What goes inside a flex container?
+flex-items
+
+https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/03.png
+
+What is flex shorthand for?
+flex-grow, flex-shrink, and flex-basis
+
+What does flex: 1 equate to? 
+flex-grow: 1, flex-shrink: 1, flex-basis: 0
+
+What is the default direction for a flex container?
+horizontal or row
+
+How can you change the direction of a flexbox?
+flex-direction: column
+
+https://flexbox.malven.co/
+
+How do you center a flexitem?
+Add display: flex, align-items: center, and justify-content: center to the container element. Aligns childs 
+
+What does justify-content do?
+Aligns items horizontally
+
+What does align-items do?
+Aligns items vertically 
+
+What does flex-direction do?
+Defines the direction that itesm are placed in the container
+
+What does align-content do?
+Sets how multiple lines are spaced apart from each other
