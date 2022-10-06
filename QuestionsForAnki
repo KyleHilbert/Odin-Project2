@@ -51,3 +51,39 @@ Defines the direction that itesm are placed in the container
 
 What does align-content do?
 Sets how multiple lines are spaced apart from each other
+
+
+
+JavaScript 
+
+How do you target the nodes you want to work with?
+	const "name" = document.querySelector('x')
+		x can be a class name, ID, or general HTML element 
+
+How do you create an element in the DOM?
+	const "name" = document.createElement('div')
+
+How do you add an element to the DOM?
+	parentNode.appendChild(childNode)
+
+How do you remove an element from the DOM?
+	parentNode.removeChild(child)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
