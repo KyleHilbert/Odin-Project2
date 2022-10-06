@@ -69,7 +69,7 @@ How do you add an element to the DOM?
 How do you remove an element from the DOM?
 	parentNode.removeChild(child)
 
-
+https://www.w3schools.com/js/js_htmldom_document.asp
 
 
 
