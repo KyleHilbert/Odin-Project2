@@ -1,8 +1,24 @@
+
 function getComputerChoice() {
   let rps = ["rock", "paper", "scissors"];
   let random = rps[Math.floor(Math.random() * rps.length)];
   return random;
 }
+
+const buttons = document.querySelectorAll('button');
+
+// console.log(buttons); // list of buttons 
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let userInput = button.id; // Sets user input to button they click
+    let computerSelection = getComputerChoice();
+    console.log(button.id); 
+    console.log(computerSelection);
+    alert(playRound(userInput, computerSelection));
+  });
+});
+
 
 function playRound(userInput, computerSelection) {
   if (userInput === computerSelection) {
@@ -21,10 +37,9 @@ function playRound(userInput, computerSelection) {
     return "You lose!Rock beats scissors";
   }
 }
-for (let i = 0; i < 5; i++) {
-  let computerSelection = getComputerChoice();
-  let userInput = prompt("Choose your weapon");
-  console.log("Round" + i + " Computer picks: " + computerSelection);
-  console.log("Round" + i + " User picks: " + userInput);
-  console.log(playRound(userInput, computerSelection));
-}
+
+
+
+
+
+
