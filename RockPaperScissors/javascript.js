@@ -38,6 +38,11 @@ player.classList.add("playerTracker");
 player.textContent = "Player Score = " + playerScore;
 score.appendChild(player);
 
+const computer = document.createElement("section");
+computer.classList.add("computerTracker");
+computer.textContent = "Computer Score = " + computerScore;
+score.appendChild(computer);
+
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
@@ -48,19 +53,18 @@ buttons.forEach((button) => {
     else {
       let userInput = button.id;
       let computerSelection = getComputerChoice();
-      //console.log("User: " + button.id + " Score: " + playerScore); 
-      //console.log("Computer: " + computerSelection + " Score: " + computerScore);
       result = playRound(userInput, computerSelection);
-      //console.log(result);
       if (result === 1) {
         playerScore += 1;
         player.textContent = "Player Score = " + playerScore;
-        score.appendChild(player);
+        //score.appendChild(player);
         if (playerScore === 5) {
           console.log("PLAYER WINS GAME!!!");
         }
       } else if (result === 2) {
         computerScore += 1;
+        computer.textContent = "Computer Score = " + computerScore;
+        //score.appendChild(computer);
         if (computerScore === 5) {
           console.log("COMPUTER WINS GAME!!!");
         }
