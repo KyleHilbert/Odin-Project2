@@ -57,14 +57,12 @@ buttons.forEach((button) => {
       if (result === 1) {
         playerScore += 1;
         player.textContent = "Player Score = " + playerScore;
-        //score.appendChild(player);
         if (playerScore === 5) {
           console.log("PLAYER WINS GAME!!!");
         }
       } else if (result === 2) {
         computerScore += 1;
         computer.textContent = "Computer Score = " + computerScore;
-        //score.appendChild(computer);
         if (computerScore === 5) {
           console.log("COMPUTER WINS GAME!!!");
         }
