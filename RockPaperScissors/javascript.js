@@ -26,13 +26,6 @@ function playRound(userInput, computerSelection) {
 let playerScore = 0;
 let computerScore = 0;
 
-const buttons = document.querySelectorAll('button');
-
-// console.log(buttons); // list of buttons 
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    if (playerScore ===5 || computerScore ===5) {
 const body = document.querySelector("body");
 
 const score = document.createElement("div");
@@ -50,29 +43,11 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     if (playerScore === 5 || computerScore === 5) {
-
       return;
     } 
     else {
       let userInput = button.id;
       let computerSelection = getComputerChoice();
-      console.log("User: " + button.id + " Score: " + playerScore); 
-      console.log("Computer: " + computerSelection + " Score: " + computerScore);
-      result = playRound(userInput, computerSelection);
-      console.log(result);
-      if (result === "It's a draw!") {
-        playerScore += 1;
-        console.log(playerScore);
-      }
-
-
-      //let userInput = button.id; // Sets user input to button they click
-      //let computerSelection = getComputerChoice();
-      //console.log(button.id); 
-      //console.log(computerSelection);
-      //alert(playRound(userInput, computerSelection));
-
-
       //console.log("User: " + button.id + " Score: " + playerScore); 
       //console.log("Computer: " + computerSelection + " Score: " + computerScore);
       result = playRound(userInput, computerSelection);
