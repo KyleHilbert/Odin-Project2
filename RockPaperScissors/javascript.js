@@ -31,17 +31,26 @@ const body = document.querySelector("body");
 const score = document.createElement("div");
 score.classList.add("scoreKeeper");
 score.style.border = "1px solid black";
+score.style.backgroundColor = "#486670"
+score.style.color = "white";
+score.style.fontWeight = "bold";
+score.style.textTransform = "uppercase";
 score.style.marginTop = "25px";
+score.style.textAlign = "center";
+score.style.padding = "25px";
 body.appendChild(score);
 
 const player = document.createElement("section");
 player.classList.add("playerTracker");
 player.textContent = "Player Score = " + playerScore;
+player.style.backgroundColor = "#486670"
+player.style.marginBottom = "15px";
 score.appendChild(player);
 
 const computer = document.createElement("section");
 computer.classList.add("computerTracker");
 computer.textContent = "Computer Score = " + computerScore;
+computer.style.backgroundColor = "#486670"
 score.appendChild(computer);
 
 const buttons = document.querySelectorAll('button');
@@ -64,13 +73,21 @@ buttons.forEach((button) => {
       playerScore += 1;
       player.textContent = "Player Score = " + playerScore;
       if (playerScore === 5) {
-        console.log("PLAYER WINS GAME!!!");
+        alert("PLAYER WINS THE GAME!!!");
+        playerScore = 0;
+        computerScore = 0;
+        player.textContent = "Player Score = " + playerScore;
+        computer.textContent = "Computer Score = " + computerScore;
       }
     } else if (result === 2) {
       computerScore += 1;
       computer.textContent = "Computer Score = " + computerScore;
       if (computerScore === 5) {
-        console.log("COMPUTER WINS GAME!!!");
+        alert("COMPUTER WINS THE GAME :(");
+        playerScore = 0;
+        computerScore = 0;
+        player.textContent = "Player Score = " + playerScore;
+        computer.textContent = "Computer Score = " + computerScore;
       }
     }
   });
