@@ -31,6 +31,7 @@ const body = document.querySelector("body");
 const score = document.createElement("div");
 score.classList.add("scoreKeeper");
 score.style.border = "1px solid black";
+score.style.marginTop = "25px";
 body.appendChild(score);
 
 const player = document.createElement("section");
@@ -47,25 +48,29 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
+    let userInput = button.id;
+    if (userInput === "reset") {
+      playerScore = 0;
+      player.textContent = "Player Score = " + playerScore;
+      computerScore = 0;
+      computer.textContent = "Computer Score = " + computerScore;        
+    }
     if (playerScore === 5 || computerScore === 5) {
       return;
     } 
-    else {
-      let userInput = button.id;
-      let computerSelection = getComputerChoice();
-      result = playRound(userInput, computerSelection);
-      if (result === 1) {
-        playerScore += 1;
-        player.textContent = "Player Score = " + playerScore;
-        if (playerScore === 5) {
-          console.log("PLAYER WINS GAME!!!");
-        }
-      } else if (result === 2) {
-        computerScore += 1;
-        computer.textContent = "Computer Score = " + computerScore;
-        if (computerScore === 5) {
-          console.log("COMPUTER WINS GAME!!!");
-        }
+    let computerSelection = getComputerChoice();
+    result = playRound(userInput, computerSelection);
+    if (result === 1) {
+      playerScore += 1;
+      player.textContent = "Player Score = " + playerScore;
+      if (playerScore === 5) {
+        console.log("PLAYER WINS GAME!!!");
+      }
+    } else if (result === 2) {
+      computerScore += 1;
+      computer.textContent = "Computer Score = " + computerScore;
+      if (computerScore === 5) {
+        console.log("COMPUTER WINS GAME!!!");
       }
     }
   });
